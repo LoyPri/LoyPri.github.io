@@ -58,6 +58,7 @@ export const checkColor = (color:string) => {
   if (!longColorRegExp.test(color) && !shortColorRegExp.test(color)) throw new Error(`invalid hex color: ${color}`);
 };
 
+
 export const hex2rgb = (color:string) => {
   checkColor(color);
   if (shortColorRegExp.test(color)) {
