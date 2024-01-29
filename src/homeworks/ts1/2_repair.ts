@@ -29,6 +29,7 @@
    currency: string;
    amount: number;
  };
+ 
 //
  export type Percent = {
    percent: number;
