@@ -29,6 +29,11 @@ interface IntHex2rgb {
   blue: number
 }
 
+interface CastomSSString {
+  x: number,
+  y: number
+}
+
 export const removePlus = (string:string):string => string.replace(/^\+/, '');
 
 export const addPlus = (string:string):string => `+${string}`;
@@ -46,7 +51,7 @@ export const round = (value: number, accuracy: number = 2): number => {
 const transformRegexp =
   /(matrix\(-?\d+(\.\d+)?, -?\d+(\.\d+)?, -?\d+(\.\d+)?, -?\d+(\.\d+)?, )(-?\d+(\.\d+)?), (-?\d+(\.\d+)?)\)/;
 
-export const getTransformFromCss = (transformCssString:string) => {
+export const getTransformFromCss = (transformCssString:string): CastomSSString => {
   const data = transformCssString.match(transformRegexp);
   if (!data) return { x: 0, y: 0 };
   return {
@@ -55,7 +60,7 @@ export const getTransformFromCss = (transformCssString:string) => {
   };
 };
 
-export const getColorContrastValue = ([red, green, blue]:CustomerCol) =>
+export const getColorContrastValue = ([red, green, blue]:CustomerCol): number =>
   // http://www.w3.org/TR/AERT#color-contrast
   Math.round((red * 299 + green * 587 + blue * 114) / 1000);
 
