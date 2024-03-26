@@ -62,11 +62,14 @@ module.exports = (_, args) => {
           ],
         },
         {
-          test: /\.svg/,
-          type: 'asset/inline',
+          test: /\.svg$/,
+          // issuer: /\.[jt]sx$/,
+          use: ['@svgr/webpack'],
+          // type: 'asset/resource',
         },
         {
           test: /\.s[ac]ss$/i,
+          exclude: /\.module\.s([ca])ss$/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -82,6 +85,34 @@ module.exports = (_, args) => {
             'sass-loader',
           ],
         },
+        {
+          test: /\.module\.s([ca])ss$/,
+          use: [
+            "style-loader",
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                esModule: false
+              }
+            },
+            {
+              loader: '@teamsupercell/typings-for-css-modules-loader',
+              options: {
+                formatter: 'prettier',
+              }
+            },
+            {
+              loader: "css-loader",
+              options: {
+                modules: {
+
+                  exportLocalsConvention: 'camelCaseOnly',
+                  localIdentName: '[local]__[contenthash:base64:5]'
+                },
+              }
+            }
+          ]
+        }
       ],
     },
     plugins: [
