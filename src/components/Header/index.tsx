@@ -16,5 +16,5 @@ const Header: FC<IHeaderProps> = (props:IHeaderProps) => {
         </>
     )
 }
-
+  
 export default Header

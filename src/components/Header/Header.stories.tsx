@@ -14,7 +14,7 @@ export default {
   },
   tags: ['autodocs']
 } as Meta;
-
+ 
 const Template: Story<IHeaderProps> = (args:IHeaderProps) => <Header {...args} />;
 
 export const Default: Story<IHeaderProps> = Template.bind({});

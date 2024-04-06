@@ -15,4 +15,4 @@ export const Default = Template.bind({});
 Default.args = {
   height:60,
   width:60
-} as SVGProps<SVGElement>;  
+} as SVGProps<SVGElement>;   

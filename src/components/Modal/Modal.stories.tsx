@@ -18,4 +18,4 @@ Default.args = {
     visible = !visible
   },
   children: 'Я модальное окно'
-} as IModal;  
+} as IModal;   
