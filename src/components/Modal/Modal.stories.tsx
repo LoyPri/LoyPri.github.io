@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import Modal, { IModal } from './index';
+import Modal, { IModal } from './Modal';
 
 export default {
   title: 'Modal',

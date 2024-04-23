@@ -1,6 +1,6 @@
 import React, { SVGProps } from 'react';
 import { Story, Meta } from '@storybook/react';
-import Logo from './index';
+import Logo from './Logo';
 
 export default {
   title: 'Logo',
