@@ -20,4 +20,4 @@ const Modal: FC<IModal> = ({ visible, onClose, children }) => {
     )
 }
 
-export default Modal
+export default Modal 

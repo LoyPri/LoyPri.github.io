@@ -1,6 +1,6 @@
 import React, { SVGProps } from 'react';
 import { Story, Meta } from '@storybook/react';
-import Logo from './index';
+import Logo from './Logo';
 
 export default {
   title: 'Logo',
@@ -15,4 +15,4 @@ export const Default = Template.bind({});
 Default.args = {
   height:60,
   width:60
-} as SVGProps<SVGElement>;  
+} as SVGProps<SVGElement>;   

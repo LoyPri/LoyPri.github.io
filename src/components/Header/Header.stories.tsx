@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Header, { IHeaderProps } from './index';
+import Header, { IHeaderProps } from './Header';
 
 export default {
   title: 'Header',
@@ -14,7 +14,7 @@ export default {
   },
   tags: ['autodocs']
 } as Meta;
-
+ 
 const Template: Story<IHeaderProps> = (args:IHeaderProps) => <Header {...args} />;
 
 export const Default: Story<IHeaderProps> = Template.bind({});
