@@ -6,4 +6,4 @@ const Logo: FC<SVGProps<SVGElement>> = (props) => {
     )
 }
 
-export default Logo
+export default Logo  
