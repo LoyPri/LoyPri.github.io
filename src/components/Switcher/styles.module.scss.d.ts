@@ -1,7 +1,12 @@
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
-    headerContainer: string;
-    headerLogo: string;
+    activationSwitcher: string;
+    active: string;
+    deactivationSwitcher: string;
+    slider: string;
+    sliderActive: string;
+    sliderDeactive: string;
+    switcher: string;
   }
 }
 

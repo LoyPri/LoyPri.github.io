@@ -1,7 +1,10 @@
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
-    headerContainer: string;
-    headerLogo: string;
+    contacts: string;
+    primaryInfo: string;
+    secondaryInfo: string;
+    themeSwitch: string;
+    wrapper: string;
   }
 }
 

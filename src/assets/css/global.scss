@@ -1,0 +1,115 @@
+$primaryColor: black;
+$secondaryColor: #A2A6B0;
+$whiteColor: white;
+$infoColor: #0156FF;
+$transparentColor: transparent;
+$lightColor: #F5F7FF;
+$greyColor: #CACDD8;
+$yellowColor: #FFB800;
+$successColor: #78a962;
+
+$primaryColorDarkMode: white;
+$secondaryColorDarkMode: #A2A6B0;
+$whiteColorDarkMode: black;
+$infoColorDarkMode: #0156FF;
+$transparentColorDarkMode: transparent;
+$lightColorDarkMode: #F5F7FF;
+$greyColorDarkMode: #CACDD8;
+$yellowColorDarkMode: #FFB800;
+$successColorDarkMode: #78a962;
+
+$maxWidth:1400px;
+
+@import url('https://fonts.cdnfonts.com/css/rubik');
+
+@mixin colors {
+    --white-color-text: #{$whiteColor};
+    --white-color-border: #{$whiteColor};
+    --white-color-background: #{$whiteColor};
+
+    --primary-color-text: #{$primaryColor};
+    --primary-color-border: #{$primaryColor};
+    --primary-color-background: #{$primaryColor};
+
+    --secondary-color-text: #{$secondaryColor};
+    --secondary-color-border: #{$secondaryColor};
+    --secondary-color-background: #{$secondaryColor};
+
+    --transparent-color-text: #{$transparentColor};
+    --transparent-color-border: #{$transparentColor};
+    --transparent-color-background: #{$transparentColor};
+
+    --info-color-text: #{$infoColor};
+    --info-color-border: #{$infoColor};
+    --info-color-background: #{$infoColor};
+
+    --light-color-text: #{$lightColor};
+    --light-color-border: #{$lightColor};
+    --light-color-background: #{$lightColor};
+
+    --grey-color-text: #{$greyColor};
+    --grey-color-border: #{$greyColor};
+    --grey-color-background: #{$greyColor};
+
+    --yellow-color-text: #{$yellowColor};
+    --yellow-color-border: #{$yellowColor};
+    --yellow-color-background: #{$yellowColor};
+
+    --success-color-text: #{$successColor};
+    --success-color-border: #{$successColor};
+    --success-color-background: #{$successColor};
+}
+
+@mixin colors-dark-mode {
+    --white-color-text: #{$whiteColorDarkMode};
+    --white-color-border: #{$whiteColorDarkMode};
+    --white-color-background: #{$whiteColorDarkMode};
+
+    --primary-color-text: #{$primaryColorDarkMode};
+    --primary-color-border: #{$primaryColorDarkMode};
+    --primary-color-background: #{$primaryColorDarkMode};
+
+    --secondary-color-text: #{$secondaryColorDarkMode};
+    --secondary-color-border: #{$secondaryColorDarkMode};
+    --secondary-color-background: #{$secondaryColorDarkMode};
+
+    --transparent-color-text: #{$transparentColorDarkMode};
+    --transparent-color-border: #{$transparentColorDarkMode};
+    --transparent-color-background: #{$transparentColorDarkMode};
+
+    --info-color-text: #{$infoColorDarkMode};
+    --info-color-border: #{$infoColorDarkMode};
+    --info-color-background: #{$infoColorDarkMode};
+
+    --light-color-text: #{$lightColorDarkMode};
+    --light-color-border: #{$lightColorDarkMode};
+    --light-color-background: #{$lightColorDarkMode};
+
+    --grey-color-text: #{$greyColorDarkMode};
+    --grey-color-border: #{$greyColorDarkMode};
+    --grey-color-background: #{$greyColorDarkMode};
+
+    --yellow-color-text: #{$yellowColorDarkMode};
+    --yellow-color-border: #{$yellowColorDarkMode};
+    --yellow-color-background: #{$yellowColorDarkMode};
+
+    --success-color-text: #{$successColorDarkMode};
+    --success-color-border: #{$successColorDarkMode};
+    --success-color-background: #{$successColorDarkMode};
+}
+
+@mixin sizes{
+    --max-width:#{$maxWidth};
+}
+:root {
+    @include sizes;
+}
+:global(.light-mode){
+    @include colors;
+}
+:global(*){
+    font-family: 'Rubik', sans-serif;
+}
+:global(.dark-mode){
+    @include colors-dark-mode;
+}
