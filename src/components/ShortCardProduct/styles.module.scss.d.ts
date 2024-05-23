@@ -1,10 +1,14 @@
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
-    activeLink: string;
-    headerContainer: string;
-    headerLogo: string;
-    navLink: string;
-    navigationBar: string;
+    buttonContainer: string;
+    description: string;
+    image: string;
+    imageContainer: string;
+    infoContainer: string;
+    name: string;
+    noImage: string;
+    price: string;
+    shortProductCard: string;
   }
 }
 

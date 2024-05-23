@@ -1,23 +1,22 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import Header, { IHeaderProps } from './index';
+import Layout, { ILayout } from './index';
 
 export default {
-  title: 'Header',
-  component: Header,
+  title: 'Layout',
+  component: Layout,
   parameters: {
     docs: {
       description: {
-        component: 'Компонент Header',
+        component: 'Компонент Layout',
       },
     },
   },
   tags: ['autodocs']
 } as Meta;
 
-export const  Default:StoryObj = (args:IHeaderProps) => <Header {...args}/>
+export const  Default:StoryObj = (args:ILayout) => <Layout {...args}/>
 Default.args = {
-  style: { border: '1px solid #10002b' },
   children: null,
 };
 
@@ -25,7 +24,7 @@ Default.parameters = {
   docs: {
     source: {
       code: `
-        <Header/>`,
+        <Layout/>`,
     },
   },
 };

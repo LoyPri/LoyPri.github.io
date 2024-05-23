@@ -4,7 +4,6 @@
  * Поэтому в идеале чтобы функции возвращали случайные данные, но в то же время не абракадабру.
  * В целом сделайте так, как вам будет удобно.
  * */
-
 /**
  * Нужно создать тип Category, он будет использоваться ниже.
  * Категория содержит
@@ -17,7 +16,6 @@ type Category = {
     name: string,
     photo?: string
 }
-
 /*
  * Продукт (Product) содержит
  * - id (строка)
@@ -40,6 +38,8 @@ type Product = {
     category: Category
 
 }
+
+export type { Product }
 /*
  * Операция (Operation) может быть либо тратой (Cost), либо доходом (Profit)
 */
@@ -82,7 +82,6 @@ type Profit = {
     category: Category,
     type: 'Profit'
 }
-
 /**
  * Создает случайный продукт (Product).
  * Принимает дату создания (строка)
@@ -102,7 +101,6 @@ export const createRandomProduct = (createdAt: string): Product => {
         }
     }
 };
-
 /**
  * Создает случайную операцию (Operation).
  * Принимает дату создания (строка)

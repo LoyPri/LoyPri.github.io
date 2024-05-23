@@ -1,18 +1,21 @@
 .App {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    max-width: var(--max-width);
+    margin: auto;
 }
 
 .App-logo {
     height: 40vmin;
     pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 5s linear;
     }
 }
-
 .App-header {
     background-color: #6c6c6c;
     min-height: 100vh;
@@ -23,11 +26,9 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
-
 .App-link {
     color: #61dafb;
 }
-
 @keyframes App-logo-spin {
     0% {
         transform: skewX(-5deg);
