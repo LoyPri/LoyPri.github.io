@@ -1,7 +1,7 @@
 import React, { FC, HTMLProps, PropsWithChildren } from "react";
 import Header from "../Header";
 import cn from 'classnames';
-import * as styles from './style.module.scss'
+import * as styles from './styles.module.scss'
 
 export interface ILayout extends HTMLProps<HTMLDivElement> {}
 
