@@ -1,7 +1,9 @@
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
-    headerContainer: string;
-    headerLogo: string;
+    cartButtonWithIncrement: string;
+    cartIcon: string;
+    increment: string;
+    inputValue: string;
   }
 }
 
