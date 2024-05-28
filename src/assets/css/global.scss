@@ -7,7 +7,6 @@ $lightColor: #F5F7FF;
 $greyColor: #CACDD8;
 $yellowColor: #FFB800;
 $successColor: #78a962;
-
 $primaryColorDarkMode: white;
 $secondaryColorDarkMode: #A2A6B0;
 $whiteColorDarkMode: black;
@@ -18,7 +17,7 @@ $greyColorDarkMode: #CACDD8;
 $yellowColorDarkMode: #FFB800;
 $successColorDarkMode: #78a962;
 
-$maxWidth:1400px;
+$maxWidth: 1400px;
 
 @import url('https://fonts.cdnfonts.com/css/rubik');
 
@@ -26,90 +25,90 @@ $maxWidth:1400px;
     --white-color-text: #{$whiteColor};
     --white-color-border: #{$whiteColor};
     --white-color-background: #{$whiteColor};
-
     --primary-color-text: #{$primaryColor};
     --primary-color-border: #{$primaryColor};
     --primary-color-background: #{$primaryColor};
-
     --secondary-color-text: #{$secondaryColor};
     --secondary-color-border: #{$secondaryColor};
     --secondary-color-background: #{$secondaryColor};
-
     --transparent-color-text: #{$transparentColor};
     --transparent-color-border: #{$transparentColor};
     --transparent-color-background: #{$transparentColor};
-
     --info-color-text: #{$infoColor};
     --info-color-border: #{$infoColor};
     --info-color-background: #{$infoColor};
-
     --light-color-text: #{$lightColor};
     --light-color-border: #{$lightColor};
     --light-color-background: #{$lightColor};
-
     --grey-color-text: #{$greyColor};
     --grey-color-border: #{$greyColor};
     --grey-color-background: #{$greyColor};
-
     --yellow-color-text: #{$yellowColor};
     --yellow-color-border: #{$yellowColor};
     --yellow-color-background: #{$yellowColor};
-
     --success-color-text: #{$successColor};
     --success-color-border: #{$successColor};
     --success-color-background: #{$successColor};
 }
-
 @mixin colors-dark-mode {
     --white-color-text: #{$whiteColorDarkMode};
     --white-color-border: #{$whiteColorDarkMode};
     --white-color-background: #{$whiteColorDarkMode};
-
     --primary-color-text: #{$primaryColorDarkMode};
     --primary-color-border: #{$primaryColorDarkMode};
     --primary-color-background: #{$primaryColorDarkMode};
-
     --secondary-color-text: #{$secondaryColorDarkMode};
     --secondary-color-border: #{$secondaryColorDarkMode};
     --secondary-color-background: #{$secondaryColorDarkMode};
-
     --transparent-color-text: #{$transparentColorDarkMode};
     --transparent-color-border: #{$transparentColorDarkMode};
     --transparent-color-background: #{$transparentColorDarkMode};
-
     --info-color-text: #{$infoColorDarkMode};
     --info-color-border: #{$infoColorDarkMode};
     --info-color-background: #{$infoColorDarkMode};
-
     --light-color-text: #{$lightColorDarkMode};
     --light-color-border: #{$lightColorDarkMode};
     --light-color-background: #{$lightColorDarkMode};
-
     --grey-color-text: #{$greyColorDarkMode};
     --grey-color-border: #{$greyColorDarkMode};
     --grey-color-background: #{$greyColorDarkMode};
-
     --yellow-color-text: #{$yellowColorDarkMode};
     --yellow-color-border: #{$yellowColorDarkMode};
     --yellow-color-background: #{$yellowColorDarkMode};
-
     --success-color-text: #{$successColorDarkMode};
     --success-color-border: #{$successColorDarkMode};
     --success-color-background: #{$successColorDarkMode};
 }
 
-@mixin sizes{
+@mixin sizes {
     --max-width:#{$maxWidth};
 }
+
 :root {
     @include sizes;
 }
-:global(.light-mode){
+:global(.light-mode) {
     @include colors;
 }
-:global(*){
+:global(*) {
     font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-color-background) var(--white-color-background);
 }
-:global(.dark-mode){
+
+:global(*::-webkit-scrollbar) {
+    width: 4px;
+}
+:global(*::-webkit-scrollbar-thumb) {
+    background-color: var(--grey-color-background);
+    border-radius: 50px;
+}
+
+:global(*::-webkit-scrollbar-track) {
+    background-color: invert(var(--grey-color-background));
+}
+
+:global(.dark-mode) {
     @include colors-dark-mode;
 }
