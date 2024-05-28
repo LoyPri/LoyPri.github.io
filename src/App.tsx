@@ -10,6 +10,8 @@ import i18n from './helpers/localization/i18next_settings';
 import { ThemeProvider } from './helpers/providers/ThemeProvider';
 import ProductList from './components/Product List';
 import { Product, createRandomProduct } from './homeworks/ts1/3_write';
+import Collapse from './components/Collapse';
+import Button from './components/ButtonOtus';
 
 const App: FC = () => {
   const [theme, setTheme] = useState('light')
